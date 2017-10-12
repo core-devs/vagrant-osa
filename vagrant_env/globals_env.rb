@@ -1,0 +1,13 @@
+######
+## GENERAL
+####
+$HOSTS = []
+$HOSTS_VARS = {}
+$GROUPS = {}
+
+$DEPLOYMENT_NUMBER_OF_HOST = 1
+
+$VBOX_DEFAULT_BOXTYPE = "bento/ubuntu-16.04"
+$VBOX_USERNAME = "vagrant"
+
+$NETWORK_INTERNAL_IP = "10.5.0."
