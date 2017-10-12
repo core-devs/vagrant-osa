@@ -29,7 +29,8 @@ deployer_hosts_vars = {}
 end
 
 $DEPLOYER_GROUPS["#{$DEPLOYER_GROUP_NAME}"] = deployer_hosts
-$DEPLOYER_GROUPS["#{$DEPLOYER_GROUP_NAME}:vars"] = deployer_hosts_vars
+$DEPLOYER_HOSTS_VARS = $DEPLOYER_HOSTS_VARS.merge(deployer_hosts_vars)
+
 
 $GROUPS = $GROUPS.merge($DEPLOYER_GROUPS)
 $HOSTS_VARS = $HOSTS_VARS.merge($DEPLOYER_HOSTS_VARS)
