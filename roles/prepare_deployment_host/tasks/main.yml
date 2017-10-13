@@ -1,0 +1,49 @@
+---
+####
+# Updating
+##
+- name: Update package source lists
+  become: yes
+  apt:
+    update_cache: yes
+- name: Upgrade the system packages and kernel
+  become: yes
+  apt:
+    upgrade: dist
+
+####
+# Install
+##
+- name: Install additional software packages
+  become: yes
+  apt: pkg={{ item }} state=latest
+  with_items:
+    - aptitude
+    - build-essential
+    - git
+    - ntp
+    - ntpdate
+    - openssh-server
+    - python-dev
+    - sudo
+
+####
+# Install the source and dependencies
+##
+- name: get openstack-ansible repo
+  become: yes
+  git:
+    repo: https://github.com/openstack/openstack-ansible.git
+    dest: /opt/openstack-ansible
+    version: 16.0.1
+
+- name: Boostraping
+  become: yes
+  command: scripts/bootstrap-ansible.sh
+  args:
+    chdir: /opt/openstack-ansible
+
+####
+# Copy update hostnames & ssh keys
+# TODO
+##
