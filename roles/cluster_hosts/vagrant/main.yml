@@ -6,17 +6,18 @@ targets:
       vbox_username: 'vagrant'
       vbox_boxtype: 'bento/ubuntu-16.04'
       vbox_iprange: '10.5.0'
+      vbox_ipoffset: 10
 
 machines:
   - vm:
       hostname: 'template01'
-      name: 'template01'
+      name: 'cdev::myproj::01'
       hw:
         cpus: '2'
         ram: '2048'
   - vm:
       hostname: 'template02'
-      name: 'template03'
+      name: 'cdev::myproj::02'
       hw:
         cpus: '2'
         ram: '2048'
