@@ -21,3 +21,11 @@ machines:
       hw:
         cpus: '2'
         ram: '2048'
+
+provisioner:
+  ansible:
+    limit: "all"
+    playbook: "cluster_template.yml"
+    groups: ""
+    host_vars: ""
+

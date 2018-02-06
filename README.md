@@ -1,7 +1,7 @@
-# vagrant-osa
+# vagrant-template
 
 Status: In Progress
 
-Script to prepare locally a bunch of machines to test the deployment
+Base script to beautify a normal vagrant deployment so looks more yml-ish
 
 [openstack-ansible deployment guide](https://docs.openstack.org/project-deploy-guide/openstack-ansible/pike/)
