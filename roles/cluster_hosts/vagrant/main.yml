@@ -1,0 +1,22 @@
+---
+canary: 'pio pio'
+
+targets:
+  virtualbox:
+      vbox_username: 'vagrant'
+      vbox_boxtype: 'bento/ubuntu-16.04'
+      vbox_iprange: '10.5.0'
+
+machines:
+  - vm:
+      hostname: 'template01'
+      name: 'template01'
+      hw:
+        cpus: '2'
+        ram: '2048'
+  - vm:
+      hostname: 'template02'
+      name: 'template03'
+      hw:
+        cpus: '2'
+        ram: '2048'
